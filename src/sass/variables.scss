@@ -1,0 +1,29 @@
+// MAX-WIDTH CONTAINER SIZE
+$max-width: 1920;
+
+// BREAKPOINTS
+$mobile: 900;
+$desktop: $mobile + 1;
+
+// COLORS
+// $copy: ;
+// $bgcolor: ;
+$bggray: hsl(207, 8%, 22%);
+$textgray: #363636;
+$imggray: #595959;
+$quotegray: #707070;
+$articlegray: #f7f7f7;
+
+$primary: red;
+$white: white;
+$h2orange: #d5874c;
+$burOrange: #ffad6e;
+$borderOrange: #f4a76c;
+$quoteorange: #ef9d5f;
+$aboutorange: #fff7f2;
+
+$titlespace: 0.24px;
+$paddingsize: 16px;
+$deskFont: 1.375rem;
+$paddingdesk: 35px;
+$fontsize: 1rem;

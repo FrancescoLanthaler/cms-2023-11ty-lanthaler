@@ -1,0 +1,197 @@
+@include breakpoint(0, 345) {
+    .smallmob {
+        display: inline-block;
+    }
+
+    .mob {
+        display: none;
+    }
+}
+
+@include breakpoint(345, $mobile) {
+    .smallmob {
+        display: none;
+    }
+
+    .mob {
+        display: inline-block;
+    }
+}
+
+@include breakpoint(0, $mobile) {
+    ul {
+        transition: 200ms;
+        display: none;
+    }
+
+    .menuOpened {
+        transition: 200ms;
+        position: fixed;
+        left: 50%;
+        display: inline-block;
+        width: 50%;
+        height: 100%;
+        background-color: $textgray;
+        z-index: 1;
+        ul {
+            padding-top: 60px;
+            padding-right: 16px;
+            display: flex;
+            flex-direction: column;
+            text-align: right;
+            font-size: $deskFont;
+            gap: 30px;
+        }
+    }
+
+    .navBar {
+        margin-left: $paddingsize;
+    }
+
+    .h2mob {
+        display: inline-block;
+        margin-bottom: 27px;
+    }
+
+    .h2desk {
+        display: none;
+    }
+
+    header {
+        height: 564px;
+    }
+
+    h1 span {
+        font-size: $fontsize;
+    }
+
+    header {
+        background-position-x: -514px;
+        background-size: cover;
+        background-position: right;
+    }
+
+    .headertitle {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+        width: fit-content;
+        font-size: 38px;
+        top: 260px;
+        float: right;
+        margin-right: 8vw;
+    }
+}
+
+@include breakpoint($desktop) {
+    #hamburger {
+        display: none;
+    }
+
+    .h2mob {
+        display: none;
+    }
+
+    .smallmob {
+        display: none;
+    }
+
+    .h2desk {
+        display: inline-block;
+    }
+
+    .button {
+        display: block;
+        width: fit-content;
+        margin-top: 50px;
+    }
+
+    .navBar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-top: 47px;
+        padding-left: 35px;
+        font-size: $deskFont;
+
+        h1 {
+            margin-top: 0px;
+        }
+        h1 span {
+            font-size: $deskFont !important;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+
+            padding-right: 65px;
+            text-align: right;
+            font-size: $deskFont;
+        }
+    }
+
+    li {
+        display: inline;
+        a {
+            color: $burOrange !important;
+            border-bottom: 1px solid $burOrange;
+            padding-bottom: 4px;
+            font-size: $deskFont;
+            font-weight: 600;
+            letter-spacing: 0.33px;
+        }
+
+        a:hover {
+            font-size: 25px;
+            transition: 0.2s;
+        }
+    }
+
+    .headertitle {
+        position: absolute;
+        font-size: 58px;
+        top: 320px;
+        left: 8%;
+        margin-right: 15px;
+    }
+
+    header {
+        background-size: cover;
+        background-position: left;
+
+        height: 900px;
+    }
+}
+
+header {
+    background-image: url(./images/headerEdit.jpg);
+    background-repeat: no-repeat;
+
+    h1 {
+        letter-spacing: $titlespace;
+        margin-top: 16px;
+    }
+
+    a,
+    h1 {
+        color: $white;
+        display: inline-block;
+    }
+
+    h1 span {
+        font-size: $fontsize !important;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    nav {
+        display: inline;
+    }
+
+    .button {
+        background-color: black;
+    }
+}

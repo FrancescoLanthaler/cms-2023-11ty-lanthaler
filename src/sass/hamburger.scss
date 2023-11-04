@@ -1,0 +1,61 @@
+@include breakpoint(0, $mobile) {
+        #hamburger {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin-top: 15px;
+            margin-right: 16px;
+            background-color: transparent;
+            border: none;
+        }
+
+        #hamburger span {
+            transition: 300ms;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            height: 1px;
+            background-color: $burOrange;
+            margin-bottom: 8px;
+        }
+
+        #ham1 {
+            width: 23px;
+        }
+
+        #ham2 {
+            width: 16px;
+            margin-left: auto;
+        }
+
+
+    .menuOpened {
+        transition: 100ms;
+
+        #hamburger span {
+            margin-bottom: 0px;
+        }
+
+        #ham1 {
+            width: 25px;
+            transition: 300ms;
+            transform: rotate(45deg);
+        }
+
+        #ham2 {
+            width: 25px;
+            transition: 300ms;
+            transform: rotate(-45deg);
+        }
+    }
+}
+
+@include breakpoint($desktop) {
+    #hamburger {
+        display: none;
+    }
+
+    .menuOpened {
+        display: none;
+    }
+}

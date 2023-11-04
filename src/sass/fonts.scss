@@ -1,0 +1,18 @@
+// TODO: Host fonts locally with https://google-webfonts-helper.herokuapp.com/fonts
+
+/* source-sans-3-300 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Source Sans 3";
+  font-style: normal;
+  font-weight: 300;
+  src: url("./fonts/SourceSansPro-Light.otf") format("opentype"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* source-sans-3-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Source Sans 3";
+  font-style: normal;
+  font-weight: 600;
+  src: url("./fonts/SourceSansPro-Semibold.otf") format("opentype"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}

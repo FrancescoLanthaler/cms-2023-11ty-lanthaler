@@ -1,0 +1,55 @@
+#about {
+  background-color: $aboutorange;
+}
+
+@include breakpoint(0, $mobile) {
+  #about {
+    padding-top: 62px;
+    img {
+      width: 100%;
+    }
+
+    p {
+      padding-top: 27px;
+      line-height: 29px;
+      padding-left: $paddingsize;
+    }
+
+    .button {
+      margin: 35px 0px 55px 16px;
+      display: inline-block;
+      color: black;
+    }
+  }
+}
+
+@include breakpoint($desktop) {
+  #about {
+    .headline {
+      padding-left: 0px;
+    }
+
+    .super-headline {
+      margin-top: 0px;
+    }
+
+    .about {
+      display: flex;
+      flex-direction: row;
+      padding: 10rem 2rem;
+      align-items: flex-start;
+    }
+    img {
+      max-width: 45vw;
+      height: 740px;
+      margin-right: 35px;
+      object-fit: cover;
+      object-position: left;
+    }
+
+    p {
+      line-height: 2.3rem;
+      max-width: 40vw;
+    }
+  }
+}

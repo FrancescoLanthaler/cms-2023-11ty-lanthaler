@@ -1,0 +1,75 @@
+main {
+  p {
+    color: $textgray;
+  }
+
+  .super-headline {
+    margin-left: 2px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+}
+
+@include breakpoint(0, $mobile) {
+  main {
+    h3 {
+      font-size: 22px;
+      color: $burOrange;
+      padding-bottom: $paddingsize;
+    }
+
+    .headline {
+      padding-left: $paddingsize;
+    }
+
+    .super-headline {
+      padding-left: 0px !important;
+      margin-top: 66px;
+      margin-bottom: 6px;
+      color: $textgray;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+  
+  #about {
+
+    background-color: $aboutorange;
+    padding-top: 62px;
+    img {
+      width: 100%;
+    }
+
+    p {
+      padding-top: 27px;
+      line-height: 29px;
+    }
+    
+    .button {
+      margin: 35px 0px 55px 16px;
+      display: inline-block;
+      color: black;
+    }
+
+  }
+
+  }
+}
+  
+@include breakpoint($desktop) {
+  main {
+    .headline {
+      padding-left: $paddingdesk;
+    }
+
+    .super-headline {
+      margin-top: 161px;
+      margin-bottom: 6px;
+      // padding-left:;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+  }
+}
+

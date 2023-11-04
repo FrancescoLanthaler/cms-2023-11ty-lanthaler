@@ -1,0 +1,130 @@
+---
+layout: primary
+---
+
+<main>
+    <section id="workshops">
+        <div class="headline">
+            <p class="super-headline">Find your entrance level & book a workshop with Marcus</p>
+            <h2>If you never start, you will never know.</h2>
+        </div>
+
+        <div class="levels">
+            <div class="level level1">
+                <div class="number">
+                    <pp>3</pp>
+                </div>
+                <div class="levelContent">
+                    <div class="outerSvg">
+                        <div class="svgLevel">
+                            <img src="./images/stretch.svg"
+                                alt='Icon showing dancer stretching her leg up to her nose.'>
+                        </div>
+                    </div>
+                    <div class="levelText">
+                        <h3>As pro as you can get</h3>
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                            invidunt
+                            ut labore et dolore magna aliquyam erat, sed diam voluptua. </p>
+                        <a href="#" class="button">Book Workshop</a>
+                    </div>
+                    <div class="quote">
+                        <img class="quotesign" src="images/quote.svg" alt="">
+                        <blockquote>Respect your<br> talent!</blockquote>
+                    </div>
+                </div>
+            </div>
+
+            <div class="level level2">
+                <div class="number">
+                    <pp>2</pp>
+                </div>
+                <div class="levelContent">
+                    <div class="outerSvg">
+                        <div class="svgLevel">
+                            <img src="./images/up.svg" alt='Icon showing dancer stretching her leg up to her nose.'>
+                        </div>
+                    </div>
+                    <div class="levelText">
+                        <h3>As pro as you can get</h3>
+                        <p>Lorem ipsum...</p>
+                        <a href="#" class="button">Book Workshop</a>
+                    </div>
+                    <div class="quote">
+                        <img class="quotesign" src="images/quote.svg" alt="">
+                        <blockquote>Thank<br>yourself for<br>levelling up now!</blockquote>
+                    </div>
+                </div>
+            </div>
+
+            <div class="level level3">
+                <div class="number">
+                    <pp>1</pp>
+                </div>
+                <div class="levelContent">
+                    <div class="svgLevel">
+                        <img src="./images/rise.svg" alt='Icon showing dancer stretching her leg up to her nose.'>
+                    </div>
+
+                    <div class="levelText">
+                        <h3>As pro as you can get</h3>
+                        <p>Lorem ipsum...</p>
+                        <a href="#" class="button">Book Workshop</a>
+                    </div>
+                    <div class="quote">
+                        <img class="quotesign" src="images/quote.svg" alt="">
+                        <blockquote>Fall in love with dancing!</blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section id="about">
+        <div class="about">
+            <img srcset="./images/aboutme-s.jpeg 893w, ./images/aboutme.jpg 3874w" sizes="(max-width: 900px) 893px,
+                3874px" src="./images/aboutme.jpg" alt="Profile of Marcus G. Miller" />
+            <div class="text">
+                <div class="headline">
+                    <p class="super-headline">Why I teach</p>
+                    <h2>Hi, I'm Marcus!</h2>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat itaque incidunt, nihil,
+                    recusandae
+                    autem aut perferendis reiciendis a neque veniam quibusdam animi ex tempora reprehenderit,
+                    aspernatur
+                    asperiores consequatur consectetur ipsum!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat itaque incidunt, nihil,
+                    recusandae
+                    autem aut perferendis reiciendis a neque veniam quibusdam animi ex tempora reprehenderit,
+                    aspernatur
+                    asperiores consequatur consectetur ipsum! Lorem ipsum dolor sit amet consectetur adipisicing
+                    elit.
+                    Placeat itaque incidunt, nihil, recusandae autem aut perferendis reiciendis a neque veniam
+                    quibusdam
+                    animi ex tempora reprehenderit, aspernatur asperiores consequatur consectetur ipsum!</p>
+
+                <a class="button dark">Learn more</a>
+            </div>
+        </div>
+    </section>
+    <section id="news">
+        <div class="headline">
+            <p class="super-headline">Making waves since 2004</p>
+            <h2>In the News</h2>
+        </div>
+        <div class="card_section">
+            {% assign news = collections.news | reverse %}
+            {% for n in news limit:3 %}
+            <article>
+                <h3><a href='{{ n.url }}'>{{ n.data.title }}</a></h3> 
+                <img srcset="{{ n.data.img-s }} 893w, {{ n.data.img }} 3874w"
+                    sizes="(max-width: 900px) 893px, 3874px" src="{{ n.data.img }}"
+                    alt="{{ n.data.img-alt }}">
+                <p>{{ n.data.excerpt }}</p>
+                <a href='{{ n.url }}' class="button">Read more</a>
+            </article>
+            {% endfor %}
+        </div>
+    </section>
+</main>

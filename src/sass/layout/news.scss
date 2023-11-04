@@ -1,0 +1,93 @@
+#news {
+  padding-top: 61px;
+
+  .super-headline {
+    margin-top: 0px;
+  }
+
+  .card_section {
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    margin: 40px $paddingsize;
+  }
+
+  article {
+    display: inline-block;
+    background-color: $articlegray;
+    max-width: 90%;
+    height: 591px;
+    vertical-align: top;
+    text-overflow: ellipsis;
+
+    h3 {
+      padding: 15px 15px 15px 15px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      max-width: 100%;
+      color: $burOrange;
+    }
+
+    p {
+      padding-left: $paddingsize;
+      padding-right: $paddingsize;
+      padding-top: 25px;
+      width: 100%;
+      line-height: 29px;
+      white-space: normal;
+
+      display: -webkit-box;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 5; /* this can be any value you want */
+    }
+
+    img {
+      object-fit: cover;
+      object-position: top center;
+      width: 100%;
+      height: 249px;
+    }
+
+    .button {
+      margin: 24px auto 0px 16px;
+      display: inline-block;
+      color: black;
+    }
+
+    h3 {
+      a {
+        color: $burOrange;
+      }
+    }
+  }
+}
+
+@include breakpoint(0, $mobile) {
+  #news {
+    article {
+      margin-right: 20px;
+    }
+  }
+}
+
+@include breakpoint($desktop) {
+  #news {
+    padding-bottom: 150px;
+    .card_section {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 36px;
+    }
+    article {
+      width: 30vw;
+    }
+
+    h3 {
+      font-size: 1.75rem;
+    }
+  }
+}
